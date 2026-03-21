@@ -1,0 +1,72 @@
+{
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "description": "OpenAI官方API（或通过代理）",
+      "models": [
+        {
+          "id": "gpt-5.2",
+          "name": "GPT-5.2",
+          "description": "最新旗舰模型，复杂推理和多步骤任务",
+          "supports_vision": true,
+          "supports_file_search": true
+        },
+        {
+          "id": "gpt-5.2-pro",
+          "name": "GPT-5.2 Pro",
+          "description": "深度推理，更多计算资源，最高质量输出",
+          "supports_vision": true,
+          "supports_file_search": true
+        },
+        {
+          "id": "gpt-5-nano",
+          "name": "GPT-5 Nano",
+          "description": "高吞吐量、简单指令跟随，最低成本",
+          "supports_vision": false,
+          "supports_file_search": false
+        }
+      ],
+      "default_model": "gpt-5.2"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "description": "Anthropic Claude API（或通过代理）",
+      "models": [
+        {
+          "id": "claude-sonnet-4-6",
+          "name": "Claude Sonnet 4.6",
+          "description": "平衡性能和成本",
+          "supports_vision": true,
+          "supports_file_search": false
+        },
+        {
+          "id": "claude-opus-4-6",
+          "name": "Claude Opus 4.6",
+          "description": "最强性能",
+          "supports_vision": true,
+          "supports_file_search": false
+        }
+      ],
+      "default_model": "claude-sonnet-4-6"
+    },
+    "custom": {
+      "name": "自定义API",
+      "description": "使用自己的API端点（需兼容OpenAI格式）",
+      "models": [
+        {
+          "id": "*",
+          "name": "自定义模型",
+          "description": "使用自定义模型名称",
+          "supports_vision": true,
+          "supports_file_search": false
+        }
+      ],
+      "default_model": "*"
+    }
+  },
+  "metadata": {
+    "version": "2.1.0",
+    "last_updated": "2026-03",
+    "description": "Reading Clipper AI模型配置 - 所有端点通过 aiRuntime 统一管理"
+  }
+}
